@@ -40,7 +40,7 @@
   display: flex;
   gap: 0.8rem;
   align-items: center;
-  margin-top: 2.4rem;
+  /* margin-top: 2.4rem; */
 }
 .slider-button {
   display: flex;
@@ -82,7 +82,7 @@
   box-sizing: border-box;
 }
 .blog-image {
-  height: 28vh;
+  height: 24vh;
   border-radius: 0.8rem;
 }
 .blog-slide-hder {
