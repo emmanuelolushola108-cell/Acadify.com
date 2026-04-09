@@ -1,5 +1,5 @@
 .hero-section {
-  padding: 9rem 1.6rem 2.4rem 1.6rem;
+  padding: 8rem 1.6rem 2.4rem 1.6rem;
   margin-bottom: 1000px;
 }
 .user-info-bar {
@@ -12,48 +12,47 @@
 }
 .welcome {
   font-size: 1.6rem;
-  font-weight: var(--medium);
+  font-weight: 400;
+  color: var(--text-primary);
 }
 .notification-count {
   position: absolute;
   background-color: red;
-  height: 1.6rem;
-  width: 1.6rem;
+  height: 1.2rem;
+  width: 1.2rem;
   border-radius: 1.6rem;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.2rem;
+  padding: 0.1rem;
   font-weight: var(--medium);
-  right: 1px;
+  right: -1px;
   top: -4px;
 }
 .blog-update-container {
   margin-top: 2.4rem;
 }
 .blog-hder p {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: var(--bold);
+  color: var(--text-primary);
 }
 .blogs-box {
   display: flex;
   gap: 0.8rem;
   align-items: center;
-  /* margin-top: 2.4rem; */
 }
 .slider-button {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   align-items: center;
-  gap: 0rem;
+  gap: 0.8rem;
   border: 1px solid var(--text-primary);
   padding: 0.4rem;
   border-radius: 1.2rem;
 }
 .slider-button button {
-  padding: 0.8rem;
   background: none;
   border-radius: 1.6rem;
   font-size: 0.8rem;
@@ -67,12 +66,12 @@
 .blog-slides {
   display: flex;
   transition: transform 0.4s ease;
-  gap: 1rem;
+  /* gap: 0.4rem; */
 }
 .blog-slide {
   display: flex;
   flex-direction: column;
-  padding: 0.8rem;
+  padding: 0.8rem 0.8rem 0.8rem 0;
   /* border: 1px solid var(--accent-color); */
   border-radius: 0.8rem;
   justify-content: center;
@@ -82,7 +81,8 @@
   box-sizing: border-box;
 }
 .blog-image {
-  height: 24vh;
+  height: 20vh;
+  max-width: fit-content;
   border-radius: 0.8rem;
 }
 .blog-slide-hder {

@@ -20,47 +20,40 @@
     <header>
       <div class="logo">
         <!--mobile view(max:360px)-->
-        <a href=""> Acadify </a>
+        <button class="hamburger-menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#0f172a"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-menu-icon lucide-menu"
+          >
+            <path d="M4 5h16" />
+            <path d="M4 12h16" />
+            <path d="M4 19h16" />
+          </svg>
+        </button>
+        <a href="#">Acadify</a>
       </div>
       <div class="middle-section">
         <!--mobile view(max: 360px)-->
       </div>
       <div class="right-section">
         <!--mobile view(max:360px)-->
-        <div class="cta">
-          <button class="hamburger-menu">
+        <div class="notification-box">
+          <div class="notification-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#ffffff"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-menu-icon lucide-menu"
-            >
-              <path d="M4 5h16" />
-              <path d="M4 12h16" />
-              <path d="M4 19h16" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </header>
-    <main class="hero-section">
-      <section class="user-info-bar">
-        <p class="welcome">Welcome back, Sarah!</p>
-        <div class="notification-box">
-          <div class="notification-icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#9333ea"
+              stroke="#06b6d4"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -76,6 +69,11 @@
             <p>1</p>
           </div>
         </div>
+      </div>
+    </header>
+    <main class="hero-section">
+      <section class="user-info-bar">
+        <p class="welcome">Welcome back, Sarah!</p>
       </section>
       <section class="blog-update-container">
         <div class="blog-hder">
@@ -206,7 +204,7 @@
       <div class="bar-header">
         <div class="logo">
           <!--mobile view(max:360px)-->
-          <a href=""> Acadify </a>
+          <a href="#"> Acadify </a>
         </div>
         <div class="acc-profile">
           <button>
@@ -216,7 +214,7 @@
               height="16"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#9333ea"
+              stroke="#0f172a"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -366,6 +364,28 @@
           </button>
           <p>Learn</p>
         </div>
+        <div class="nav">
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-file-icon lucide-file"
+            >
+              <path
+                d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"
+              />
+              <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+            </svg>
+          </button>
+          <p>Files</p>
+        </div>
         <!-- <div class="nav">
           <button>no</button>
           <p>Notes</p>
@@ -374,9 +394,6 @@
           <button>no</button>
           <p>Notes</p>
         </div> -->
-      </div>
-      <div class="file-input-field">
-        <button class="add-btn">Add File</button>
       </div>
       <div class="added-files">
         <div class="hder-1000">
@@ -391,38 +408,6 @@
             <p class="file-name">ENT 301</p>
             <p class="file-date">Just now</p>
           </div>
-        </div>
-      </div>
-      <section class="user-input-overlay"></section>
-      <div class="user-input-field">
-        <div class="title-box">
-          <p>Title:</p>
-          <input type="text" class="title-input" placeholder="File title" />
-        </div>
-        <div class="file-box">
-          <p>Files:</p>
-          <input type="file" class="file-input" id="fileInput" />
-          <label for="fileInput" class="label">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#ffffff"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-plus-icon lucide-plus"
-            >
-              <path d="M5 12h14" />
-              <path d="M12 5v14" />
-            </svg>
-          </label>
-          <span id="fileName"></span>
-        </div>
-        <div class="cta-box">
-          <button class="add-files-cta">Add</button>
         </div>
       </div>
     </section>

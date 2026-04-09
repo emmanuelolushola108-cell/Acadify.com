@@ -11,13 +11,23 @@ header {
   z-index: 100;
   background-color: rgba(255, 255, 255, 0.9);
 }
+.logo button {
+  background: none;
+  border: none;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
 .logo a {
-  font-size: var(--mobile-hder);
-  font-weight: var(--bold);
+  font-size: 1.6rem;
+  font-weight: 700;
   color: var(--text-primary);
 }
 .cta {
-  background-color: var(--accent-color);
+  background-color: var(--secondary-color);
   border: none;
   padding: 0.8rem;
   border-radius: 32px;
@@ -36,34 +46,48 @@ header {
   width: 90%;
   bottom: 0;
   z-index: 200;
+  overflow-y: auto;
   height: 100%;
   background-color: var(--background-color);
-  padding: 1.6rem 0.8rem;
+  /* padding: 1.6rem 1.6rem; */
   transition: left 0.4s ease;
+  border-top-right-radius: 1.2rem;
 }
 .bar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 1.4rem;
+  background-color: var(--background-color);
 }
 .acc-profile {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  padding: 0.4rem 0.8rem;
-  border-radius: 3.2rem;
-  border: 1px solid var(--accent-color);
+  padding: 0.2rem;
+  height: 2.4rem;
+  width: 2.4rem;
+  border-radius: 1.2rem;
+  border: 1px solid var(--secondary-color);
 }
 .acc-profile button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: none;
   border: none;
   border-radius: 1.6rem;
-  padding: 0.4rem;
   color: #ffffff;
 }
 .navigations {
-  margin: 2.4rem 0 2.4rem 0;
-  padding: 1.6rem 0.8rem;
+  margin: 2.4rem 1.2rem 2.4rem 1.2rem;
+  padding: 1.2rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
@@ -80,9 +104,11 @@ header {
   gap: 0.4rem;
 }
 .nav button {
-  padding: 1.6rem;
-  border-radius: 2.4rem;
-  border: 1px solid var(--accent-color);
+  padding: 0.6rem;
+  height: 4rem;
+  width: 4rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 2rem;
   background-color: var(--background-color);
 }
 .nav p {
@@ -99,7 +125,7 @@ header {
 }
 .file-input-field button {
   padding: 0.8rem;
-  background-color: var(--accent-color);
+  background-color: var(--secondary-color);
   color: #ffffff;
   border: none;
   border-radius: 3.2rem;
@@ -109,7 +135,9 @@ header {
   background-color: var(--hover-color);
 }
 .added-files {
-  margin: 2.4rem 0;
+  margin: 2.4rem 1.2rem 0 1.2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 1.2rem;
 }
 .hder-1000 {
   display: flex;
@@ -117,7 +145,7 @@ header {
   align-items: center;
   font-size: 1.2rem;
   font-weight: var(--bold);
-  padding: 1.6rem 0rem;
+  padding: 0rem 0rem 1.6rem 0;
 }
 .files {
   display: flex;
@@ -177,7 +205,7 @@ header {
   align-items: center;
   gap: 0.4rem;
   font-size: 1.2rem;
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--secondary-color);
   border-radius: 2rem;
   padding: 0.4rem 0.8rem;
 }
@@ -196,7 +224,7 @@ header {
 }
 .label {
   padding: 0.4rem;
-  background-color: var(--accent-color);
+  background-color: var(--secondary-color);
   color: white;
   border-radius: 1.2rem;
 }
@@ -209,7 +237,7 @@ header {
   margin-top: 2rem;
   padding: 0.6rem;
   width: 6rem;
-  background-color: var(--accent-color);
+  background-color: var(--secondary-color);
   border-radius: 1.2rem;
   border: none;
   color: white;
