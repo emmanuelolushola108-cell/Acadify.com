@@ -201,3 +201,9 @@
   align-items: center;
   padding-top: 2.4rem;
 }
+.divider {
+  margin-top: 1.4rem;
+  height: 1px;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.05);
+}
