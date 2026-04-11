@@ -110,10 +110,10 @@
 }
 .user-profile {
   display: flex;
-  /* justify-content: space-between; */
   gap: 1.6rem;
   align-items: center;
-  padding: 2rem 0 0 0;
+  padding-top: 2rem;
+  width: 100%;
 }
 .user-img {
   height: 4rem;
@@ -128,16 +128,23 @@
   border-radius: 2rem;
 }
 .post-request {
-  padding-left: 0.8rem;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
-  padding-right: clamp(8rem, 3vw, 8rem);
-  min-width: 12rem;
-  max-width: 20rem;
-  border-radius: 2rem;
   display: flex;
   align-items: center;
+  flex: 1;
+}
+.poster {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 2rem;
   border: 1px solid rgba(15, 23, 42, 0.4);
+  outline: none;
+}
+.poster::placeholder {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 300;
 }
 .post-request p {
   font-size: 1.2rem;
