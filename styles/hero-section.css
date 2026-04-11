@@ -81,15 +81,109 @@
   box-sizing: border-box;
 }
 .blog-image {
-  height: 20vh;
+  height: 24vh;
   max-width: fit-content;
   border-radius: 0.8rem;
 }
 .blog-slide-hder {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: var(--medium);
-  max-width: 20rem;
+}
+.blog-title a {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+  transition: color 0.2s ease;
+}
+.blog-title a:hover {
+  color: var(--hover-color-s);
 }
 .blog-body-text {
   max-width: 26rem;
+}
+.user-profile {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 1.6rem;
+  align-items: center;
+  padding: 2rem 0 0 0;
+}
+.user-img {
+  height: 4rem;
+  border-radius: 2.5rem;
+}
+.post-user-img {
+  height: 4rem;
+  border-radius: 2rem;
+}
+.user {
+  width: 4rem;
+  border-radius: 2rem;
+}
+.post-request {
+  padding-left: 0.8rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  padding-right: clamp(8rem, 3vw, 8rem);
+  min-width: 12rem;
+  max-width: 20rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(15, 23, 42, 0.4);
+}
+.post-request p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.blog-title {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.post-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  /* align-items: center; */
+  justify-content: flex-start;
+}
+.poster-detail {
+  display: flex;
+  gap: 0.8rem;
+}
+.blog-date {
+  display: flex;
+  justify-content: flex-start;
+}
+.post-interactions {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+.post-interactions button {
+  border: none;
+}
+.join-discussion {
+  border: 1px solid var(--secondary-color);
+  color: white;
+  background-color: var(--secondary-color);
+  padding: 0.4rem 0.8rem;
+  border-radius: 1.2rem;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+.join-discussion:hover {
+  background-color: var(--hover-color-s);
+}
+.like,
+.share {
+  background: none;
+}
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+  padding-top: 2.4rem;
 }

@@ -14,7 +14,7 @@ html {
   --mobile-sub-bd-text: 1.4rem;
   --primary-color: #4f46e5;
   --hover-color: #8230cf;
-  --hover-color-s: #079cb6;
+  --hover-color-s: #17bedb;
   --accent-color: #9333ea;
   --background-color: #f8fafc;
   --secondary-color: #06b6d4;
@@ -34,6 +34,7 @@ body {
   font-weight: 300;
   font-style: normal;
   background-color: var(--background-color);
+  color: var(--text-primary);
 }
 a {
   text-decoration: none;
