@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mobile-hder: 2.8rem;
+  --mobile-sub-hder: 1.8rem;
+  --mobile-bd-text: 1.4rem;
+  --mobile-sub-bd-text: 1.4rem;
+  --primary-color: #4f46e5;
+  --hover-color: #8230cf;
+  --hover-color-s: #17bedb;
+  --accent-color: #9333ea;
+  --background-color: #f8fafc;
+  --secondary-color: #06b6d4;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --section: #ffffff;
+  --bold: 600;
+  --medium: 500;
+  --regular: 400;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("/images/抽象的な青色の背景.jfif");
+  background-position: center;
+  object-fit: cover;
+  /* background-repeat: no-repeat; */
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/* .overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: 2rem;
+  padding: 3rem 4rem;
+  border: none;
+  border-radius: 1.2rem;
+} */
+.login-con {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 2.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1.2rem;
+  gap: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.logo {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+.login-hd p {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.login-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.2rem;
+  flex: 1;
+}
+.email-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 1.2rem;
+}
+.email-input input {
+  padding: 0.6rem 0.8rem 0.6rem 1.2rem;
+  border-radius: 0.6rem;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+}
+.email-input input::placeholder {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.2);
+}
+.forgot-p {
+  margin-top: 1.2rem;
+  display: flex;
+}
+.login-button {
+  margin-top: 1.2rem;
+}
+.login-button button {
+  background-color: rgb(51, 95, 240);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.8rem;
+  font-size: 1.1rem;
+  transition: background-color 0.2s ease;
+}
+.login-button button a {
+  color: white;
+  text-decoration: none;
+}
+.login-button button:hover {
+  background-color: rgb(44, 81, 204);
+}
