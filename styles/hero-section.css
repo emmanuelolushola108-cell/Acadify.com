@@ -177,6 +177,9 @@
 }
 .post-interactions button {
   border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 .join-discussion {
   border: 1px solid var(--secondary-color);
