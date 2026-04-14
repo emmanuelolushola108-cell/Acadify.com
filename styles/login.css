@@ -122,3 +122,31 @@ body {
 .login-button button:hover {
   background-color: rgb(44, 81, 204);
 }
+.sign-up-div {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  flex-shrink: 0;
+  padding-top: 8rem;
+}
+.overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sign-up-cta {
+  background-color: #f8fafc;
+  border: 1px solid rgb(51, 95, 240);
+  border-radius: 2rem;
+  color: rgb(51, 95, 240);
+  padding: 0.8rem 3.2rem;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+.sign-up-cta:hover {
+  background-color: white;
+}
