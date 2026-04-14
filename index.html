@@ -12,10 +12,12 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles/general.css" />
     <link rel="stylesheet" href="styles/login.css" />
+    <link rel="stylesheet" href="styles/sign-up.css" />
   </head>
   <body>
-    <section class="overlay">
+    <section class="login">
       <div class="login-con">
         <div class="logo"><p>Acadify</p></div>
         <div class="login-details">
@@ -43,6 +45,57 @@
       <div class="sign-up-div">
         <div class="sign-up-cta">
           <span>Sign up</span>
+        </div>
+      </div>
+    </section>
+    <section class="sign-up">
+      <div class="sign-up-hder">
+        <p>Welcome! Let’s get you signed up</p>
+      </div>
+      <div class="sign-up-form">
+        <div class="account-detail">
+          <form action="" class="form1">
+            <input class="surname" placeholder="Surname" type="text" />
+            <input class="First-name" placeholder="first name" type="text" />
+          </form>
+          <form action="" class="form2">
+            <input placeholder="Email" type="email" class="email" />
+          </form>
+          <form action="" class="form4">
+            <input
+              placeholder="day"
+              type="number"
+              class="day"
+              min="1"
+              max="30"
+            />
+            <input
+              placeholder="month"
+              type="number"
+              class="month"
+              min="1"
+              max="12"
+            />
+            <input
+              placeholder="year"
+              type="number"
+              class="year"
+              min="1900"
+              max="2026"
+            />
+          </form>
+          <form action="" class="form5">
+            <select name="" id="">
+              <option value="Female" class="Female-g">Female</option>
+              <option value="male" class="male-g">Male</option>
+            </select>
+          </form>
+          <form action="" class="form3">
+            <input placeholder="Password" type="password" class="email" />
+          </form>
+          <div class="submit-cta">
+            <p>Create Account</p>
+          </div>
         </div>
       </div>
     </section>

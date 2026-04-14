@@ -29,20 +29,18 @@ html {
 
 body {
   position: relative;
-  margin: 0;
-  padding: 0;
+
+  padding: 2.4rem;
   box-sizing: border-box;
   background-image: url("../images/抽象的な青色の背景.jfif");
   background-position: center;
   object-fit: cover;
-  /* background-repeat: no-repeat; */
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100vh;
 }
 /* .overlay {
@@ -125,14 +123,13 @@ body {
 .sign-up-div {
   display: flex;
   justify-content: center;
-  flex: 1;
-  flex-shrink: 0;
   padding-top: 8rem;
 }
-.overlay {
+.login {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  display: none;
 }
 .sign-up-cta {
   background-color: #f8fafc;

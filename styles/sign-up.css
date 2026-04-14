@@ -1,0 +1,98 @@
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sign-up-hder p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: white;
+}
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--secondary-color);
+  background-color: white;
+  border-radius: 0.8rem;
+  padding: 1.6rem 2.4rem;
+  margin-top: 2.4rem;
+}
+.form1 {
+  display: flex;
+  gap: 1.2rem;
+}
+.form1 input {
+  max-width: 12rem;
+  padding: 0.6rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 1.2rem;
+  font-size: 1rem;
+  outline: none;
+  background-color: white;
+}
+.form1 input::placeholder,
+.form2 input::placeholder {
+  font-size: 1.1rem;
+}
+.form2,
+.form3 {
+  flex: 1;
+  padding: 0.4rem 0.4rem;
+  border-radius: 1.2rem;
+  font-size: 1rem;
+  outline: none;
+  background-color: white;
+}
+.account-detail {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  cursor: pointer;
+}
+.form2 input,
+.form3 input,
+.form4 input {
+  margin-top: 1.2rem;
+  width: 100%;
+  padding: 0.6rem;
+  outline: none;
+  background-color: white;
+  border: 1px solid var(--secondary-color);
+  border-radius: 1.6rem;
+  font-size: 1rem;
+}
+.form4,
+.form5 {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: space-between;
+}
+.form5 {
+  margin-top: 1.2rem;
+}
+.form5 select {
+  width: 100%;
+  padding: 0.6rem;
+  outline: none;
+  background-color: white;
+  border: 1px solid var(--secondary-color);
+  border-radius: 1.6rem;
+  font-size: 1rem;
+}
+.submit-cta {
+  margin-top: 2.4rem;
+  display: flex;
+  justify-content: center;
+  padding: 1.2rem 0;
+  border: 1px solid var(--secondary-color);
+  border-radius: 1.6rem;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: 400;
+  transition: background-color 0.2s ease;
+}
+.submit-cta:hover {
+  background-color: var(--hover-color-s);
+}
