@@ -1,15 +1,5 @@
-.sign-up {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.sign-up-hder p {
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: white;
-}
 .sign-up-form {
-  display: flex;
+  display: none;
   flex-direction: column;
   border: 1px solid var(--secondary-color);
   background-color: white;
@@ -17,6 +7,13 @@
   padding: 4rem;
   margin-top: 2.4rem;
   height: fit-content;
+}
+.display-on {
+  display: flex;
+}
+.sign-up-page {
+  display: flex;
+  align-items: center;
 }
 .form1 {
   display: flex;

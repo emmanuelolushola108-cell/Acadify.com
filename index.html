@@ -25,67 +25,97 @@
             <p>Login</p>
           </div>
           <form class="login-inputs">
-            <div class="email-input">
+            <div class="email-input-login">
               <p>Email</p>
-              <input placeholder="username@gmail.com" type="email" />
+              <input
+                class="login-email"
+                placeholder="username@gmail.com"
+                type="email"
+              />
             </div>
-            <div class="email-input">
+            <div class="email-input-login">
               <p>Password</p>
-              <input placeholder="password" type="password" />
+              <input
+                class="login-password"
+                placeholder="password"
+                type="password"
+              />
             </div>
             <div class="forgot-p">
-              <p><a href="#">Forgot password?</a></p>
+              <p><a href="#" class="forget-password">Forgot password?</a></p>
             </div>
             <div class="login-button">
-              <button class="login-cta"><a href="main.html">Sign in</a></button>
+              <button class="login-cta"><a href="#">Sign in</a></button>
             </div>
           </form>
         </div>
       </div>
       <div class="sign-up-div">
-        <div class="sign-up-cta">
+        <button class="sign-up-cta">
           <span>Sign up</span>
-        </div>
+        </button>
       </div>
     </section>
-    <form class="sign-up-form">
-      <!--header-->
-      <p class="welcome-msg">Welcome! Let’s get you signed up</p>
-      <p class="hder"></p>
-      <!-- Name -->
-      <div class="label"><p>Name</p></div>
-      <div class="form1">
-        <input placeholder="Surname" type="text" />
-        <input placeholder="First-name" type="text" />
-      </div>
+    <section class="sign-up-page">
+      <form class="sign-up-form">
+        <!--header-->
+        <p class="welcome-msg">Welcome! Let’s get you signed up</p>
+        <!-- Name -->
+        <div class="label"><p>Name</p></div>
+        <div class="form1">
+          <input class="surname" placeholder="Surname" type="text" />
+          <input class="first-name" placeholder="First-name" type="text" />
+        </div>
 
-      <!-- Email -->
-      <div class="label"><p>Email</p></div>
-      <input class="email-input" placeholder="you@gmail.com" type="email" />
+        <!-- Email -->
+        <div class="label"><p>Email</p></div>
+        <input
+          class="email-input sign-email-input"
+          placeholder="you@gmail.com"
+          type="email"
+        />
 
-      <!-- Date -->
-      <div class="label"><p>Date of birth</p></div>
-      <div class="form4">
-        <input placeholder="DD" type="number" min="1" max="31" />
-        <input placeholder="MM" type="number" min="1" max="12" />
-        <input placeholder="YYYY" type="number" min="1900" max="2026" />
-      </div>
+        <!-- Date -->
+        <div class="label"><p>Date of birth</p></div>
+        <div class="form4">
+          <input class="day" placeholder="DD" type="number" min="1" max="31" />
+          <input
+            class="month"
+            placeholder="MM"
+            type="number"
+            min="1"
+            max="12"
+          />
+          <input
+            class="year"
+            placeholder="YYYY"
+            type="number"
+            min="1900"
+            max="2026"
+          />
+        </div>
 
-      <!-- Gender -->
-      <div class="label"><p>Gender</p></div>
-      <div class="form5">
-        <label class="f-box">
-          Female <input type="radio" name="gender" />
-        </label>
-        <label class="m-box"> Male <input type="radio" name="gender" /> </label>
-      </div>
+        <!-- Gender -->
+        <div class="label"><p>Gender</p></div>
+        <div class="form5">
+          <label class="f-box">
+            Female
+            <input class="female" value="female" type="radio" name="gender" />
+          </label>
+          <label class="m-box">
+            Male <input class="male" value="male" type="radio" name="gender" />
+          </label>
+        </div>
 
-      <!-- Password -->
-      <div class="label"><p>Password</p></div>
-      <input class="password-input" placeholder="Password" type="password" />
+        <!-- Password -->
+        <div class="label"><p>Password</p></div>
+        <input class="password-input" placeholder="Password" type="password" />
 
-      <!-- Button -->
-      <button type="submit" class="submit-cta">Create Account</button>
-    </form>
+        <!-- Button -->
+        <button type="submit" class="submit-cta">Create Account</button>
+      </form>
+    </section>
+
+    <script type="module" src="scripts/login-page.js"></script>
   </body>
 </html>
