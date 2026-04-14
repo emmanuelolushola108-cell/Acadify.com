@@ -14,8 +14,9 @@
   border: 1px solid var(--secondary-color);
   background-color: white;
   border-radius: 0.8rem;
-  padding: 1.6rem 2.4rem;
+  padding: 4rem;
   margin-top: 2.4rem;
+  height: fit-content;
 }
 .form1 {
   display: flex;
@@ -32,12 +33,12 @@
 }
 .form1 input::placeholder,
 .form2 input::placeholder {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .form2,
 .form3 {
+  display: flex;
   flex: 1;
-  padding: 0.4rem 0.4rem;
   border-radius: 1.2rem;
   font-size: 1rem;
   outline: none;
@@ -53,7 +54,7 @@
 .form2 input,
 .form3 input,
 .form4 input {
-  margin-top: 1.2rem;
+  /* margin-top: 1.2rem; */
   width: 100%;
   padding: 0.6rem;
   outline: none;
@@ -62,31 +63,40 @@
   border-radius: 1.6rem;
   font-size: 1rem;
 }
-.form4,
+.email-input,
+.password-input {
+  padding: 0.6rem;
+  outline: none;
+  background-color: white;
+  border: 1px solid var(--secondary-color);
+  border-radius: 1.6rem;
+  font-size: 1rem;
+  margin-top: 0;
+}
+.form4 {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.form4 input {
+  width: 33.3%; /* Each takes equal space */
+  padding: 0.6rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 1.6rem;
+}
 .form5 {
   display: flex;
-  gap: 0.4rem;
-  justify-content: space-between;
+  gap: 2.4rem;
+  border-radius: 1.2rem;
 }
-.form5 {
-  margin-top: 1.2rem;
-}
-.form5 select {
-  width: 100%;
-  padding: 0.6rem;
-  outline: none;
-  background-color: white;
-  border: 1px solid var(--secondary-color);
-  border-radius: 1.6rem;
-  font-size: 1rem;
-}
+
 .submit-cta {
   margin-top: 2.4rem;
   display: flex;
   justify-content: center;
   padding: 1.2rem 0;
   border: 1px solid var(--secondary-color);
-  border-radius: 1.6rem;
+  border-radius: 2.4rem;
   cursor: pointer;
   background-color: var(--secondary-color);
   color: white;
@@ -95,4 +105,25 @@
 }
 .submit-cta:hover {
   background-color: var(--hover-color-s);
+}
+.label {
+  display: block;
+  margin-bottom: 0.4rem;
+  margin-top: 1.2rem;
+}
+.label:first-child {
+  margin-top: 0;
+}
+.f-box,
+.m-box {
+  display: flex;
+  gap: 0.8rem;
+  border: 1px solid var(--secondary-color);
+  padding: 0.6rem;
+  border-radius: 1.6rem;
+}
+.welcome-msg {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
 }

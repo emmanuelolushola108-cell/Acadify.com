@@ -48,56 +48,44 @@
         </div>
       </div>
     </section>
-    <section class="sign-up">
-      <div class="sign-up-hder">
-        <p>Welcome! Let’s get you signed up</p>
+    <form class="sign-up-form">
+      <!--header-->
+      <p class="welcome-msg">Welcome! Let’s get you signed up</p>
+      <p class="hder"></p>
+      <!-- Name -->
+      <div class="label"><p>Name</p></div>
+      <div class="form1">
+        <input placeholder="Surname" type="text" />
+        <input placeholder="First-name" type="text" />
       </div>
-      <div class="sign-up-form">
-        <div class="account-detail">
-          <form action="" class="form1">
-            <input class="surname" placeholder="Surname" type="text" />
-            <input class="First-name" placeholder="first name" type="text" />
-          </form>
-          <form action="" class="form2">
-            <input placeholder="Email" type="email" class="email" />
-          </form>
-          <form action="" class="form4">
-            <input
-              placeholder="day"
-              type="number"
-              class="day"
-              min="1"
-              max="30"
-            />
-            <input
-              placeholder="month"
-              type="number"
-              class="month"
-              min="1"
-              max="12"
-            />
-            <input
-              placeholder="year"
-              type="number"
-              class="year"
-              min="1900"
-              max="2026"
-            />
-          </form>
-          <form action="" class="form5">
-            <select name="" id="">
-              <option value="Female" class="Female-g">Female</option>
-              <option value="male" class="male-g">Male</option>
-            </select>
-          </form>
-          <form action="" class="form3">
-            <input placeholder="Password" type="password" class="email" />
-          </form>
-          <div class="submit-cta">
-            <p>Create Account</p>
-          </div>
-        </div>
+
+      <!-- Email -->
+      <div class="label"><p>Email</p></div>
+      <input class="email-input" placeholder="you@gmail.com" type="email" />
+
+      <!-- Date -->
+      <div class="label"><p>Date of birth</p></div>
+      <div class="form4">
+        <input placeholder="DD" type="number" min="1" max="31" />
+        <input placeholder="MM" type="number" min="1" max="12" />
+        <input placeholder="YYYY" type="number" min="1900" max="2026" />
       </div>
-    </section>
+
+      <!-- Gender -->
+      <div class="label"><p>Gender</p></div>
+      <div class="form5">
+        <label class="f-box">
+          Female <input type="radio" name="gender" />
+        </label>
+        <label class="m-box"> Male <input type="radio" name="gender" /> </label>
+      </div>
+
+      <!-- Password -->
+      <div class="label"><p>Password</p></div>
+      <input class="password-input" placeholder="Password" type="password" />
+
+      <!-- Button -->
+      <button type="submit" class="submit-cta">Create Account</button>
+    </form>
   </body>
 </html>
