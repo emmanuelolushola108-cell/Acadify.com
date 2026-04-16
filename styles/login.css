@@ -43,6 +43,11 @@ body {
   justify-content: center;
   height: 100vh;
 }
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .login-con {
   display: flex;
   flex-direction: column;
@@ -117,11 +122,6 @@ body {
   display: flex;
   justify-content: center;
   padding-top: 8rem;
-}
-.login {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .display-off {
   display: none;
