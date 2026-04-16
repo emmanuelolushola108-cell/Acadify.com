@@ -1,12 +1,10 @@
 .sign-up-form {
+  display: flex;
   flex-direction: column;
   border: 1px solid var(--secondary-color);
   background-color: white;
   border-radius: 0.8rem;
   padding: 4rem;
-}
-.display-on {
-  display: flex;
 }
 .sign-up-page {
   display: flex;
@@ -14,6 +12,12 @@
   align-items: center;
   justify-content: center;
   display: none;
+}
+.display-off {
+  display: none;
+}
+.display-on {
+  display: flex;
 }
 .form1 {
   display: flex;

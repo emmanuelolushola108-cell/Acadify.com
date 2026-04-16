@@ -126,6 +126,9 @@ body {
 .display-off {
   display: none;
 }
+.display-on {
+  display: flex;
+}
 .sign-up-cta {
   background-color: #f8fafc;
   border: 1px solid rgb(51, 95, 240);
