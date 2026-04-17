@@ -8,8 +8,7 @@ export function signUpUser(userData, loginPage, signUpPage) {
   const userExist = users.find((user) => user.email === email);
 
   if (userExist) {
-    loginPage.classList.toggle("display-on");
-    signUpPage.classList.toggle("display-off");
+    switchToSignUp(loginPage, signUpPage);
     return;
   }
 
@@ -30,8 +29,7 @@ export function loginUser(userPassword, userEmail, signUpPage, loginPage) {
     localStorage.setItem("currentUser", JSON.stringify(userExist));
     window.location.href = "main.html";
   } else {
-    signUpPage.classList.add("display-on");
-    loginPage.classList.add("display-off");
+    switchToSignUp(loginPage, signUpPage);
     alert("sign up to get started");
   }
 }
@@ -80,4 +78,50 @@ export function isValidPassword(password) {
   const pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
 
   return pattern.test(password);
+}
+export function switchToSignUp(loginPage, signUpPage) {
+  if (!loginPage || !signUpPage) return;
+
+  loginPage.classList.add("display-off");
+  loginPage.classList.remove("display-on");
+
+  signUpPage.classList.add("display-on");
+  signUpPage.classList.remove("display-off");
+}
+export function redirectPage(showPage, hidePage) {
+  if (!showPage || !hidePage) return;
+
+  showPage.classList.add("display-on");
+  showPage.classList.remove("display-off");
+
+  hidePage.classList.add("display-off");
+  hidePage.classList.remove("display-on");
+}
+export function inputFieldCheck(input, inputField, check, msgBox) {
+  const content = msgBox.textContent;
+  input.addEventListener("input", () => {
+    const value = input.value;
+    const isValid = check(value);
+
+    if (value === "") {
+      inputField.classList.remove("alarm-border");
+      msgBox.textContent = content;
+      msgBox.style.color = "var(--text-primary)";
+      return;
+    }
+
+    if (!isValid) {
+      inputField.classList.add("alarm-border");
+      msgBox.style.color = "rgb(241, 10, 10)";
+      msgBox.textContent =
+        input.type === "password"
+          ? "Password must contain uppercase, lowercase & number"
+          : "Invalid email format";
+      return;
+    }
+
+    inputField.classList.remove("alarm-border");
+    msgBox.style.color = "green";
+    msgBox.textContent = "Looks good ✓";
+  });
 }

@@ -6,6 +6,9 @@ import {
   isValidEmail,
   isValidName,
   isValidPassword,
+  switchToSignUp,
+  redirectPage,
+  inputFieldCheck,
 } from "../services/authServices.js";
 
 const loginPage = document.querySelector(".login");
@@ -21,9 +24,12 @@ const signPasswordInput = document.querySelector(".password-input");
 const signUpBtn = document.querySelector(".submit-cta");
 const loginRedirectBtn = document.querySelector(".login-redirect");
 const loginBtn = document.querySelector(".login-cta");
-const signUpRedirectBtn = document.querySelector(".login-redirect");
+const signUpRedirectBtn = document.querySelector(".signup-redirect");
 const loginPassword = document.querySelector(".login-password");
 const loginEmail = document.querySelector(".login-email");
+const passwordLabel = document.querySelector(".password-label");
+const emailLabel = document.querySelector(".email-label");
+
 loginBtn.addEventListener("click", (e) => {
   e.preventDefault();
   const email = loginEmail.value;
@@ -83,3 +89,34 @@ signUpBtn.addEventListener("click", (e) => {
     yearInput.value =
       "";
 });
+loginRedirectBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  redirectPage(loginPage, signUpPage);
+  firstNameInput.value =
+    surnameInput.value =
+    signEmailInput.value =
+    signPasswordInput.value =
+    dayInput.value =
+    monthInput.value =
+    yearInput.value =
+      "";
+});
+signUpRedirectBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  redirectPage(signUpPage, loginPage);
+  firstNameInput.value =
+    surnameInput.value =
+    signEmailInput.value =
+    signPasswordInput.value =
+    dayInput.value =
+    monthInput.value =
+    yearInput.value =
+      "";
+});
+inputFieldCheck(
+  signPasswordInput,
+  signPasswordInput,
+  isValidPassword,
+  passwordLabel,
+);
+inputFieldCheck(signEmailInput, signEmailInput, isValidEmail, emailLabel);
