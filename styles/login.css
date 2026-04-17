@@ -91,7 +91,7 @@ body {
 }
 .email-input-login input {
   padding: 0.6rem 0.8rem 0.6rem 1.2rem;
-  border-radius: 0.6rem;
+  border-radius: 1.2rem;
   border: 1px solid var(--secondary-color);
   outline: none;
   font-size: 1.1rem;
@@ -113,7 +113,7 @@ body {
   color: var(--text-secondary);
   border: 1px solid var(--secondary-color);
   padding: 0.8rem 1.6rem;
-  border-radius: 0.8rem;
+  border-radius: 2.4rem;
   font-size: 1.1rem;
   transition: all 0.2s ease;
 }
