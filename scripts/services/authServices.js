@@ -17,7 +17,18 @@ export function signUpUser(userData, loginPage, signUpPage) {
   localStorage.setItem("currentUser", JSON.stringify(userData));
   window.location.href = "main.html";
 }
-export function loginUser(userPassword, userEmail, signUpPage, loginPage) {
+
+function displayLoginError(txtcon, input, msg) {
+  txtcon.textContent = msg;
+  const clearError = () => {
+    txtcon.textContent = "";
+    input.removeEventListener("input", clearError);
+  };
+
+  input.addEventListener("input", clearError);
+}
+
+export function loginUser(userPassword, userEmail, txtcon, input, msg) {
   const users = JSON.parse(localStorage.getItem("users")) || [];
   if (!userPassword || !userEmail) return;
 
@@ -29,8 +40,8 @@ export function loginUser(userPassword, userEmail, signUpPage, loginPage) {
     localStorage.setItem("currentUser", JSON.stringify(userExist));
     window.location.href = "main.html";
   } else {
-    switchToSignUp(loginPage, signUpPage);
-    alert("sign up to get started");
+    displayLoginError(txtcon, input, msg);
+    return;
   }
 }
 

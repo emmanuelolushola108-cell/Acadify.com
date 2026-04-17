@@ -29,13 +29,20 @@ const loginEmail = document.querySelector(".login-email");
 const passwordLabel = document.querySelector(".password-label");
 const emailLabel = document.querySelector(".email-label");
 const wrapper = document.querySelector(".auth-wrapper");
+const errorMsgCon = document.querySelector(".error");
 
 loginBtn.addEventListener("click", (e) => {
   e.preventDefault();
   const email = loginEmail.value;
   const password = loginPassword.value;
   console.log(email, password);
-  loginUser(password, email, signUpPage, loginPage);
+  loginUser(
+    password,
+    email,
+    errorMsgCon,
+    loginEmail,
+    "Invalid email or password",
+  );
   loginPassword.value = loginEmail.value = "";
 });
 signUpBtn.addEventListener("click", (e) => {
