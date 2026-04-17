@@ -44,10 +44,15 @@ body {
   height: 100vh;
 }
 .login {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 2;
 }
+.show-signup .login {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
 .login-con {
   display: flex;
   flex-direction: column;
@@ -55,17 +60,17 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 1.2rem;
   gap: 2rem;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgb(255, 255, 255);
 }
 .logo {
-  color: white;
+  color: var(--secondary-color);
   font-size: 1.6rem;
   font-weight: 500;
   display: flex;
   justify-content: center;
 }
 .login-hd p {
-  color: white;
+  color: var(--secondary-color);
   font-size: 1.4rem;
   font-weight: 500;
 }
@@ -81,19 +86,20 @@ body {
   flex-direction: column;
   gap: 0.8rem;
   font-size: 1.2rem;
-  color: white;
+  color: var(--text-primary);
   margin-top: 1.2rem;
 }
 .email-input-login input {
   padding: 0.6rem 0.8rem 0.6rem 1.2rem;
   border-radius: 0.6rem;
-  border: none;
+  border: 1px solid var(--secondary-color);
   outline: none;
   font-size: 1.1rem;
+  color: var(--secondary-color);
 }
 .email-input input::placeholder {
   font-size: 1rem;
-  color: rgba(0, 0, 0, 0.2);
+  color: var(--secondary-color);
 }
 .forgot-p {
   margin-top: 1.2rem;
@@ -103,20 +109,21 @@ body {
   margin-top: 1.2rem;
 }
 .login-button button {
-  background-color: rgb(51, 95, 240);
-  color: white;
-  border: none;
+  background-color: white;
+  color: var(--text-secondary);
+  border: 1px solid var(--secondary-color);
   padding: 0.8rem 1.6rem;
   border-radius: 0.8rem;
   font-size: 1.1rem;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
 }
-.login-button button a {
-  color: white;
+/* .login-button button a {
+  color: var(--secondary-color);
   text-decoration: none;
-}
+} */
 .login-button button:hover {
-  background-color: rgb(44, 81, 204);
+  background-color: var(--secondary-color);
+  color: white;
 }
 .sign-up-div {
   display: flex;

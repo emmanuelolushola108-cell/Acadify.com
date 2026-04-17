@@ -79,23 +79,11 @@ export function isValidPassword(password) {
 
   return pattern.test(password);
 }
-export function switchToSignUp(loginPage, signUpPage) {
-  if (!loginPage || !signUpPage) return;
+export function toggleAuth(wrapper, showSignup) {
+  if (!wrapper) return;
+  console.log(showSignup);
 
-  loginPage.classList.add("display-off");
-  loginPage.classList.remove("display-on");
-
-  signUpPage.classList.add("display-on");
-  signUpPage.classList.remove("display-off");
-}
-export function redirectPage(showPage, hidePage) {
-  if (!showPage || !hidePage) return;
-
-  showPage.classList.add("display-on");
-  showPage.classList.remove("display-off");
-
-  hidePage.classList.add("display-off");
-  hidePage.classList.remove("display-on");
+  wrapper.classList.toggle("show-signup", showSignup);
 }
 export function inputFieldCheck(input, inputField, check, msgBox) {
   const content = msgBox.textContent;

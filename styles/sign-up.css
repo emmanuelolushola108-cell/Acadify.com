@@ -1,17 +1,40 @@
+.auth-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.auth-wrapper section {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
 .sign-up-form {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--secondary-color);
   background-color: white;
   border-radius: 0.8rem;
-  padding: 4rem;
+  padding: 2rem;
 }
 .sign-up-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  display: none;
+  transform: translateX(100%);
+  opacity: 0;
+}
+.show-signup .sign-up-page {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 2;
 }
 .display-off {
   display: none;

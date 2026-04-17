@@ -6,8 +6,7 @@ import {
   isValidEmail,
   isValidName,
   isValidPassword,
-  switchToSignUp,
-  redirectPage,
+  toggleAuth,
   inputFieldCheck,
 } from "../services/authServices.js";
 
@@ -29,6 +28,7 @@ const loginPassword = document.querySelector(".login-password");
 const loginEmail = document.querySelector(".login-email");
 const passwordLabel = document.querySelector(".password-label");
 const emailLabel = document.querySelector(".email-label");
+const wrapper = document.querySelector(".auth-wrapper");
 
 loginBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -91,7 +91,7 @@ signUpBtn.addEventListener("click", (e) => {
 });
 loginRedirectBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  redirectPage(loginPage, signUpPage);
+  toggleAuth(wrapper, false);
   firstNameInput.value =
     surnameInput.value =
     signEmailInput.value =
@@ -103,7 +103,7 @@ loginRedirectBtn.addEventListener("click", (e) => {
 });
 signUpRedirectBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  redirectPage(signUpPage, loginPage);
+  toggleAuth(wrapper, true);
   firstNameInput.value =
     surnameInput.value =
     signEmailInput.value =

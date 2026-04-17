@@ -17,112 +17,124 @@
     <link rel="stylesheet" href="styles/sign-up.css" />
   </head>
   <body>
-    <section class="login">
-      <div class="login-con">
-        <div class="logo"><p>Acadify</p></div>
-        <div class="login-details">
-          <div class="login-hd">
-            <p>Login</p>
+    <div class="auth-wrapper">
+      <section class="login">
+        <div class="login-con">
+          <div class="logo"><p>Acadify</p></div>
+          <div class="login-details">
+            <div class="login-hd">
+              <p>Login</p>
+            </div>
+            <form class="login-inputs">
+              <div class="email-input-login">
+                <p>Email</p>
+                <input
+                  class="login-email"
+                  placeholder="username@gmail.com"
+                  type="email"
+                />
+              </div>
+              <div class="email-input-login">
+                <p>Password</p>
+                <input
+                  class="login-password"
+                  placeholder="password"
+                  type="password"
+                />
+              </div>
+              <div class="forgot-p">
+                <p><a href="#" class="forget-password">Forgot password?</a></p>
+              </div>
+              <div class="login-button">
+                <button class="login-cta" type="submit">Login</button>
+              </div>
+            </form>
           </div>
-          <form class="login-inputs">
-            <div class="email-input-login">
-              <p>Email</p>
-              <input
-                class="login-email"
-                placeholder="username@gmail.com"
-                type="email"
-              />
-            </div>
-            <div class="email-input-login">
-              <p>Password</p>
-              <input
-                class="login-password"
-                placeholder="password"
-                type="password"
-              />
-            </div>
-            <div class="forgot-p">
-              <p><a href="#" class="forget-password">Forgot password?</a></p>
-            </div>
-            <div class="login-button">
-              <button class="login-cta"><a href="#">Login</a></button>
-            </div>
-          </form>
         </div>
-      </div>
-      <div class="redirect">
-        <p>
-          Don't have an account?
-          <button class="signup-redirect">Sign up</button>
-        </p>
-      </div>
-    </section>
-    <section class="sign-up-page">
-      <form class="sign-up-form">
-        <!--header-->
-        <p class="welcome-msg">Welcome! Let’s get you signed up</p>
-        <!-- Name -->
-        <div class="label"><p>Name</p></div>
-        <div class="form1">
-          <input class="surname" placeholder="Surname" type="text" />
-          <input class="first-name" placeholder="First-name" type="text" />
+        <div class="redirect">
+          <p>
+            Don't have an account?
+            <button class="signup-redirect">Sign up</button>
+          </p>
         </div>
+      </section>
+      <section class="sign-up-page">
+        <form class="sign-up-form">
+          <!--header-->
+          <p class="welcome-msg">Welcome! Let’s get you signed up</p>
+          <!-- Name -->
+          <div class="label"><p>Name</p></div>
+          <div class="form1">
+            <input class="surname" placeholder="Surname" type="text" />
+            <input class="first-name" placeholder="First-name" type="text" />
+          </div>
 
-        <!-- Email -->
-        <div class="label email-label"><p>Email</p></div>
-        <input
-          class="email-input sign-email-input"
-          placeholder="you@gmail.com"
-          type="email"
-        />
-
-        <!-- Date -->
-        <div class="label"><p>Date of birth</p></div>
-        <div class="form4">
-          <input class="day" placeholder="DD" type="number" min="1" max="31" />
+          <!-- Email -->
+          <div class="label email-label"><p>Email</p></div>
           <input
-            class="month"
-            placeholder="MM"
-            type="number"
-            min="1"
-            max="12"
+            class="email-input sign-email-input"
+            placeholder="you@gmail.com"
+            type="email"
           />
+
+          <!-- Date -->
+          <div class="label"><p>Date of birth</p></div>
+          <div class="form4">
+            <input
+              class="day"
+              placeholder="DD"
+              type="number"
+              min="1"
+              max="31"
+            />
+            <input
+              class="month"
+              placeholder="MM"
+              type="number"
+              min="1"
+              max="12"
+            />
+            <input
+              class="year"
+              placeholder="YYYY"
+              type="number"
+              min="1900"
+              max="2026"
+            />
+          </div>
+
+          <!-- Gender -->
+          <div class="label"><p>Gender</p></div>
+          <div class="form5">
+            <label class="f-box">
+              Female
+              <input class="female" value="female" type="radio" name="gender" />
+            </label>
+            <label class="m-box">
+              Male
+              <input class="male" value="male" type="radio" name="gender" />
+            </label>
+          </div>
+
+          <!-- Password -->
+          <div class="label password-label"><p>Password</p></div>
           <input
-            class="year"
-            placeholder="YYYY"
-            type="number"
-            min="1900"
-            max="2026"
+            class="password-input"
+            placeholder="Password"
+            type="password"
           />
+
+          <!-- Button -->
+          <button type="submit" class="submit-cta">Create Account</button>
+        </form>
+        <div class="redirect">
+          <p>
+            Have an account?
+            <button class="login-redirect">Login</button>
+          </p>
         </div>
-
-        <!-- Gender -->
-        <div class="label"><p>Gender</p></div>
-        <div class="form5">
-          <label class="f-box">
-            Female
-            <input class="female" value="female" type="radio" name="gender" />
-          </label>
-          <label class="m-box">
-            Male
-            <input class="male" value="male" type="radio" name="gender" />
-          </label>
-        </div>
-
-        <!-- Password -->
-        <div class="label password-label"><p>Password</p></div>
-        <input class="password-input" placeholder="Password" type="password" />
-
-        <!-- Button -->
-        <button type="submit" class="submit-cta">Create Account</button>
-      </form>
-      <div class="redirect">
-        <p>
-          Have an account?
-          <button class="login-redirect">Login</button>
-        </p>
-      </div>
-    </section>
+      </section>
+    </div>
     <script type="module" src="scripts/pages/signup.js"></script>
   </body>
 </html>
