@@ -1,3 +1,7 @@
+"use strict";
+
+import { fileUpload } from "../components/file-card.js";
+
 export function signUpUser(userData, loginPage, signUpPage) {
   const users = JSON.parse(localStorage.getItem("users")) || [];
 
@@ -15,7 +19,7 @@ export function signUpUser(userData, loginPage, signUpPage) {
   users.push(userData);
   localStorage.setItem("users", JSON.stringify(users));
   localStorage.setItem("currentUser", JSON.stringify(userData));
-  window.location.href = "main.html";
+  goTo("main.html");
 }
 
 function displayLoginError(txtcon, input, msg) {
@@ -38,7 +42,7 @@ export function loginUser(userPassword, userEmail, txtcon, input, msg) {
 
   if (userExist) {
     localStorage.setItem("currentUser", JSON.stringify(userExist));
-    window.location.href = "main.html";
+    goTo("main.html");
   } else {
     displayLoginError(txtcon, input, msg);
     return;
@@ -122,5 +126,35 @@ export function inputFieldCheck(input, inputField, check, msgBox) {
     inputField.classList.remove("alarm-border");
     msgBox.style.color = "green";
     msgBox.textContent = "Looks good ✓";
+  });
+}
+export function searchResources(input, resources, con) {
+  if (!input || !resources || !con) return;
+
+  input.addEventListener("input", () => {
+    const value = input.value.toLowerCase();
+
+    if (!value) {
+      fileUpload(resources, con);
+      return;
+    }
+
+    const search = resources.filter(
+      (file) =>
+        file.category.toLowerCase().includes(value) ||
+        file.title.toLowerCase().includes(value) ||
+        file.tags.some((tag) => tag.includes(value)),
+    );
+
+    if (search.length === 0) {
+      con.innerHTML = `<p>No results found</p>`;
+      return;
+    }
+    fileUpload(search);
+  });
+}
+export function goTo(btn, page) {
+  btn.addEventListener("click", () => {
+    window.location.href = page;
   });
 }
