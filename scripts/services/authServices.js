@@ -12,14 +12,13 @@ export function signUpUser(userData, loginPage, signUpPage) {
   const userExist = users.find((user) => user.email === email);
 
   if (userExist) {
-    switchToSignUp(loginPage, signUpPage);
     return;
   }
 
   users.push(userData);
   localStorage.setItem("users", JSON.stringify(users));
   localStorage.setItem("currentUser", JSON.stringify(userData));
-  goTo("main.html");
+  window.location.href = "main.html";
 }
 
 function displayLoginError(txtcon, input, msg) {
@@ -42,7 +41,8 @@ export function loginUser(userPassword, userEmail, txtcon, input, msg) {
 
   if (userExist) {
     localStorage.setItem("currentUser", JSON.stringify(userExist));
-    goTo("main.html");
+    window.location.href = "main.html";
+    // goTo("main.html");
   } else {
     displayLoginError(txtcon, input, msg);
     return;
@@ -154,6 +154,7 @@ export function searchResources(input, resources, con) {
   });
 }
 export function goTo(btn, page) {
+  if (!btn || !page) return;
   btn.addEventListener("click", () => {
     window.location.href = page;
   });
